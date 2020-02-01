@@ -1,0 +1,54 @@
+#bodyContainer {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15vh;
+  height: 100vh;
+  color: blue;
+  text-shadow: 1px 1px 3px #0f0d23;
+}
+
+#background {
+  background-image: url(../media/facebook-texas-holdem.jpg);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.blind {
+  width: 40px;
+  text-align: center;
+}
+
+.inputs {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+#settingsButton {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 10;
+  border-color: white;
+}
+
+.settings {
+  display: none;
+  background-color: #272e3a80;
+  height: 100vh;
+  z-index: 5;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
+
+#mainTitle {
+  font-size: 80px;
+  font-weight: bold;
+}

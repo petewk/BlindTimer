@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Charm|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="https://kit.fontawesome.com/1d72bd5e58.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="background">
+    <button type="button" class="btn btn-primary" name="button" id="settingsButton">Settings</button>
+    <div id="bodyContainer">
+    <h1 id="mainTitle">POKER BLIND TIMER</h1>
+        <br><br>
+
+        <button type="button" class="btn btn-primary" id="startButton" name="button">Push to start timing</button>
+      <!--INPUT SECTIONS FOR THE TIMERS GO HERE-->
+
+
+    <!--INPUT SECTIONS FOR THE BLIND AMOUNTS GO IN HERE-->
+
+    <div>
+      <h1 id="timerText">The time remaining until the blinds increase is:</h1>
+      <h2 id="timerTime"></h2>
+        <br><br>
+      <h1 id="blindText">The current blinds are:</h1>
+      <h2 id="currentBlinds"></h2>
+
+    </div>
+    </div>
+    </div>
+
+    <!--This will show the settings to adjust the blind times-->
+
+    <div class="settings">
+        <br><br><br>
+      <h2>Set the Blinds and time between Blind Raises</h2>
+          <br>
+
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smalllBlind1">Small blind 1</label><br>
+          <input type="text" name="bigBlind1" id="smallBlind1" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind1">Big blind 1</label><br>
+          <input type="text" name="bigBlind1" id="bigBlind1" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime1">Time (mins)</label><br>
+          <input type="text" name="blindTime1" id="blindTime1" value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smallBlind2">Small blind 2</label><br>
+          <input type="text" name="smallBlind2" value="" id="smallBlind2">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind2">Big blind 2</label><br>
+          <input type="text" name="bigBlind2" id="bigBlind2" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime2">Time (mins)</label><br>
+          <input type="text" name="blindTime2" id="blindTime2" value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smallBlind3">Small blind 3</label><br>
+          <input type="text" name="smallBlind3" id="smallBlind3" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind3">Big blind 3</label><br>
+          <input type="text" name="bigBlind3" id="bigBlind3" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime3">Time (mins)</label><br>
+          <input type="text" name="blindTime3" id="blindTime3" value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smallBlind4">Small blind 4</label><br>
+          <input type="text" name="smallBlind4" id="smallBlind4" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind4">Big blind 4</label><br>
+          <input type="text" name="bigBlind4" id="bigBlind4" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime4">Time (mins)</label><br>
+          <input type="text" name="blindTime4" id="blindTime3" value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smallBlind5">Small blind 5</label><br>
+          <input type="text" name="smallBlind5" id-"smallBlind5" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind5">Big blind 5</label><br>
+          <input type="text" name="bigBlind5" id="smallBlind5"value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime5">Time (mins)</label><br>
+          <input type="text" name="blindTime5" id="blindTime5" value="">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+
+        </div>
+        <div class="form-group col-md-2">
+          <label for="smallBlind6">Small blind 6</label><br>
+          <input type="text" name="smallBlind6" id="smallBlind6" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="bigBlind6">Big blind 6</label><br>
+          <input type="text" name="bigBlind6" id-"bigBlind6" value="">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="blindTime6">Time (mins)</label><br>
+          <input type="text" name="blindTime6" id="blindTime6" value="">
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-primary" id="setButton" name="button">Set</button>
+    </div>
+
+      <!-- Scripts go here -->
+    <script type="text/javascript" src="jquery-3.4.1.min.js"> </script>
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js" type="text/javascript"> </script>
+    <script src="./js/script2.js" type="text/javascript"> </script>
+  </body>
+</html>
