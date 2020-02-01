@@ -86,7 +86,7 @@ $('#setButton').click(function(){
       setBlinds();
       setTimes();
 
-    console.log(minutesLeft);
+    //console.log(minutesLeft);
 
 });
 
@@ -105,30 +105,37 @@ var present = 0;
 }
 })
 
+
+countdown = false;
+
+function updateTime(){
+    totalTime = totalTime - 1000;
+    minutesRemaining = Math.floor(totalTime / 60000);
+    secondsRemaining = Math.floor((totalTime % 60000)/1000);
+    $('#timerTime').html(`${minutesRemaining} minutes and ${secondsRemaining} seconds`);
+    console.log(countdown)};
+
+
 $('#startButton').click(function(){
-    //console.log(number);
-    //console.log(minutesLeft);
+
+    countdown = true;
+    console.log(round);
     totalTime = (minutesLeft * 60000) + (secondsLeft * 1000);
+
     setInterval(function(){
-      if (totalTime > 0){
-      totalTime = totalTime - 1000}}, 1000);
+      if (countdown === true) {
+        updateTime()}}, 1000);
+
     setInterval(function(){
-    minutesRemaining = Math.floor(totalTime / 60000)}, 1000)
-    setInterval(function(){
-    secondsRemaining = Math.floor((totalTime % 60000)/1000)}, 1000);
-    setInterval(function(){
-    $('#timerTime').html(`${minutesRemaining} minutes and ${secondsRemaining} seconds`)
-    }, 1000);
-    setInterval(function(){
-    if (totalTime < 1000){
-    round ++;
-    setBlinds();
-    setTimes();
-    totalTime = (minutesLeft * 60000) + (secondsLeft * 1000)}}, 1000);
+      if (totalTime < 1000){
+      round ++;
+      countdown = false;
+      console.log(countdown);
+      setBlinds();
+      setTimes();
+      totalTime = (minutesLeft * 60000) + (secondsLeft * 1000)}}, 1000);
     //console.log(blindTime4);
 
 });
-
-
 
 })
