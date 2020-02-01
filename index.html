@@ -23,11 +23,17 @@
     <!--INPUT SECTIONS FOR THE BLIND AMOUNTS GO IN HERE-->
 
     <div>
-      <h1 id="timerText">The time remaining until the blinds increase is:</h1>
+      <h1 id="timerText">Time until the blinds increase:</h1>
       <h2 id="timerTime"></h2>
         <br><br>
       <h1 id="blindText">The current blinds are:</h1>
       <h2 id="currentBlinds"></h2>
+
+          <br><br><br>
+      <button type="button" class="btn btn-secondary" id="continue" name="button">Click to continue</button>
+      <audio id="bell" src="./media/bellring.wav.crdownload">
+
+      </audio>
 
     </div>
     </div>
@@ -106,7 +112,7 @@
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime4">Time (mins)</label><br>
-          <input type="text" name="blindTime4" id="blindTime3" value="">
+          <input type="text" name="blindTime4" id="blindTime4" value="">
         </div>
       </div>
       <div class="form-row">
@@ -115,11 +121,11 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind5">Small blind 5</label><br>
-          <input type="text" name="smallBlind5" id-"smallBlind5" value="">
+          <input type="text" name="smallBlind5" id="smallBlind5" value="">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind5">Big blind 5</label><br>
-          <input type="text" name="bigBlind5" id="smallBlind5"value="">
+          <input type="text" name="bigBlind5" id="bigBlind5"value="">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime5">Time (mins)</label><br>
@@ -136,14 +142,14 @@
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind6">Big blind 6</label><br>
-          <input type="text" name="bigBlind6" id-"bigBlind6" value="">
+          <input type="text" name="bigBlind6" id="bigBlind6" value="">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime6">Time (mins)</label><br>
           <input type="text" name="blindTime6" id="blindTime6" value="">
         </div>
       </div>
-
+        <br><br>
       <button type="button" class="btn btn-primary" id="setButton" name="button">Set</button>
     </div>
 

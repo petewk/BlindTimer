@@ -29,27 +29,27 @@ var number = 1;
 
 function setTimes(){
   if (round == 1){
-    $('#currentBlinds').html(`Big: ${bigBlind1} - Small: ${smallBlind1}`)
+    $('#currentBlinds').html(`Small: ${smallBlind1} -- Big: ${bigBlind1}`)
     minutesLeft = (blindTime1)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 } else if (round == 2){
-    $('#currentBlinds').html(`Big: ${bigBlind2} - Small: ${smallBlind2}`)
+    $('#currentBlinds').html(`Small: ${smallBlind2} -- Big: ${bigBlind2}`)
     minutesLeft = (blindTime2)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 } else if (round == 3){
-    $('#currentBlinds').html(`Big: ${bigBlind3} - Small: ${smallBlind3}`)
+    $('#currentBlinds').html(`Small: ${smallBlind3} -- Big: ${bigBlind3}`)
     minutesLeft = (blindTime3)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 } else if (round == 4){
-    $('#currentBlinds').html(`Big: ${bigBlind4} - Small: ${smallBlind4}`)
+    $('#currentBlinds').html(`Small: ${smallBlind4} -- Big: ${bigBlind4}`)
     minutesLeft = (blindTime4)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 } else if (round == 5){
-    $('#currentBlinds').html(`Big: ${bigBlind5} - Small: ${smallBlind5}`)
+    $('#currentBlinds').html(`Small: ${smallBlind5} -- Big: ${bigBlind5}`)
     minutesLeft = (blindTime5)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 } else if (round == 6){
-    $('#currentBlinds').html(`Big: ${bigBlind6} - Small: ${smallBlind6}`)
+    $('#currentBlinds').html(`Small: ${smallBlind6} -- Big: ${bigBlind6}`)
     minutesLeft = (blindTime6)
     $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`)
 }
@@ -85,6 +85,7 @@ $('#setButton').click(function(){
       $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`);
       setBlinds();
       setTimes();
+      console.log(smallBlind5);
 
     //console.log(minutesLeft);
 
@@ -118,6 +119,11 @@ function updateTime(){
 
 $('#startButton').click(function(){
 
+
+
+    $('#startButton').fadeOut('slow');
+    $('#continue').fadeIn('slow');
+
     countdown = true;
     console.log(round);
     totalTime = (minutesLeft * 60000) + (secondsLeft * 1000);
@@ -128,14 +134,21 @@ $('#startButton').click(function(){
 
     setInterval(function(){
       if (totalTime < 1000){
+      $('#bell')[0].play();
       round ++;
       countdown = false;
       console.log(countdown);
       setBlinds();
       setTimes();
       totalTime = (minutesLeft * 60000) + (secondsLeft * 1000)}}, 1000);
-    //console.log(blindTime4);
+
+
 
 });
+
+
+$('#continue').click(function(){
+    countdown = true;
+})
 
 })
