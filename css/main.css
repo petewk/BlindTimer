@@ -16,6 +16,24 @@
   left: 0px;
 }
 
+.playpause {
+  width: 15%;
+  bottom: 5%;
+  margin: 0 auto;
+  display: none;
+}
+
+.form-group input {
+  width: 100px;
+  margin: 0 auto;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  font-size: larger;
+}
+
 .blind {
   width: 40px;
   text-align: center;
@@ -59,6 +77,12 @@
   font-size: larger;
   font-weight: bold;
   border-color: white;
+}
+
+input {
+  background-color: lightskyblue;
+  text-align: center;
+  color: mediumvioletred;
 }
 
 #continue{

@@ -16,6 +16,7 @@
         <br><br>
 
         <button type="button" class="btn btn-primary" id="startButton" name="button">Push to start timing</button>
+
           <br><br>
       <!--INPUT SECTIONS FOR THE TIMERS GO HERE-->
 
@@ -31,7 +32,17 @@
 
           <br><br><br>
       <button type="button" class="btn btn-secondary" id="continue" name="button">Click to continue</button>
+          <br><br>
+  
+      <div class="playpause">
+        <button type="button" class="btn btn-success" id="playButton" name="button"><i class="fas fa-play"></i></button>
+        <button type="button" class="btn btn-warning" id="pauseButton" name="button"><i class="fas fa-pause"></i></button>
+      </div>
+
       <audio id="bell" src="./media/bellring.wav.crdownload">
+
+
+
 
       </audio>
 
@@ -53,15 +64,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smalllBlind1">Small blind 1</label><br>
-          <input type="text" name="bigBlind1" id="smallBlind1" value="">
+          <input type="text" name="bigBlind1" class="form-control" id="smallBlind1" value="">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind1">Big blind 1</label><br>
-          <input type="text" name="bigBlind1" id="bigBlind1" value="">
+          <input type="text" name="bigBlind1" class="form-control" id="bigBlind1" value="">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime1">Time (mins)</label><br>
-          <input type="text" name="blindTime1" id="blindTime1" value="">
+          <input type="text" name="blindTime1" class="form-control" id="blindTime1" value="">
         </div>
       </div>
       <div class="form-row">
@@ -70,15 +81,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind2">Small blind 2</label><br>
-          <input type="text" name="smallBlind2" value="" id="smallBlind2">
+          <input type="text" name="smallBlind2" value="" id="smallBlind2" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind2">Big blind 2</label><br>
-          <input type="text" name="bigBlind2" id="bigBlind2" value="">
+          <input type="text" name="bigBlind2" id="bigBlind2" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime2">Time (mins)</label><br>
-          <input type="text" name="blindTime2" id="blindTime2" value="">
+          <input type="text" name="blindTime2" id="blindTime2" value="" class="form-control">
         </div>
       </div>
       <div class="form-row">
@@ -87,15 +98,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind3">Small blind 3</label><br>
-          <input type="text" name="smallBlind3" id="smallBlind3" value="">
+          <input type="text" name="smallBlind3" id="smallBlind3" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind3">Big blind 3</label><br>
-          <input type="text" name="bigBlind3" id="bigBlind3" value="">
+          <input type="text" name="bigBlind3" id="bigBlind3" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime3">Time (mins)</label><br>
-          <input type="text" name="blindTime3" id="blindTime3" value="">
+          <input type="text" name="blindTime3" id="blindTime3" value="" class="form-control">
         </div>
       </div>
       <div class="form-row">
@@ -104,15 +115,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind4">Small blind 4</label><br>
-          <input type="text" name="smallBlind4" id="smallBlind4" value="">
+          <input type="text" name="smallBlind4" id="smallBlind4" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind4">Big blind 4</label><br>
-          <input type="text" name="bigBlind4" id="bigBlind4" value="">
+          <input type="text" name="bigBlind4" id="bigBlind4" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime4">Time (mins)</label><br>
-          <input type="text" name="blindTime4" id="blindTime4" value="">
+          <input type="text" name="blindTime4" id="blindTime4" value="" class="form-control">
         </div>
       </div>
       <div class="form-row">
@@ -121,15 +132,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind5">Small blind 5</label><br>
-          <input type="text" name="smallBlind5" id="smallBlind5" value="">
+          <input type="text" name="smallBlind5" id="smallBlind5" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind5">Big blind 5</label><br>
-          <input type="text" name="bigBlind5" id="bigBlind5"value="">
+          <input type="text" name="bigBlind5" id="bigBlind5" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime5">Time (mins)</label><br>
-          <input type="text" name="blindTime5" id="blindTime5" value="">
+          <input type="text" name="blindTime5" id="blindTime5" value="" class="form-control">
         </div>
       </div>
       <div class="form-row">
@@ -138,15 +149,15 @@
         </div>
         <div class="form-group col-md-2">
           <label for="smallBlind6">Small blind 6</label><br>
-          <input type="text" name="smallBlind6" id="smallBlind6" value="">
+          <input type="text" name="smallBlind6" id="smallBlind6" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="bigBlind6">Big blind 6</label><br>
-          <input type="text" name="bigBlind6" id="bigBlind6" value="">
+          <input type="text" name="bigBlind6" id="bigBlind6" value="" class="form-control">
         </div>
         <div class="form-group col-md-2">
           <label for="blindTime6">Time (mins)</label><br>
-          <input type="text" name="blindTime6" id="blindTime6" value="">
+          <input type="text" name="blindTime6" id="blindTime6" value="" class="form-control">
         </div>
       </div>
         <br><br>

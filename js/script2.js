@@ -85,7 +85,8 @@ $('#setButton').click(function(){
       $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`);
       setBlinds();
       setTimes();
-      console.log(smallBlind5);
+      $('.settings').fadeOut('slow');
+      $('#bodyContainer').fadeIn('slow');
 
     //console.log(minutesLeft);
 
@@ -104,7 +105,7 @@ var present = 0;
         $('#bodyContainer').fadeIn('slow');
         present = 0;
 }
-})
+});
 
 
 countdown = false;
@@ -117,24 +118,32 @@ function updateTime(){
     console.log(countdown)};
 
 
+var bellPlays = 0;
+
+
 $('#startButton').click(function(){
 
 
 
     $('#startButton').fadeOut('slow');
-    $('#continue').fadeIn('slow');
+
 
     countdown = true;
     console.log(round);
     totalTime = (minutesLeft * 60000) + (secondsLeft * 1000);
+
+    $('.playpause').fadeIn('slow');
 
     setInterval(function(){
       if (countdown === true) {
         updateTime()}}, 1000);
 
     setInterval(function(){
-      if (totalTime < 1000){
+      if (totalTime < 1000 && bellPlays < 1){
       $('#bell')[0].play();
+      bellPlays ++;
+      $('#continue').fadeIn('slow');
+      $('.playpause').fadeOut('slow');
       round ++;
       countdown = false;
       console.log(countdown);
@@ -147,8 +156,20 @@ $('#startButton').click(function(){
 });
 
 
+$('#playButton').click(function(){
+    countdown = true;
+});
+
+$('#pauseButton').click(function(){
+    countdown = false;
+});
+
 $('#continue').click(function(){
     countdown = true;
+    console.log(round);
+    bellPlays = 0;
+    $('#continue').fadeOut('slow');
+    $('.playpause').fadeIn('slow');
 })
 
 })
