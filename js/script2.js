@@ -10,6 +10,7 @@ var number = 1;
 
 function setTimes(){
     $('#currentBlinds').html(`Small: ${smallblindArray()} -- Big: ${bigblindArray()}`);
+    $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`);
 
     minutesLeft = blindtimeArray();
 };
