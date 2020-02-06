@@ -1,0 +1,114 @@
+#bodyContainer {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15vh;
+  height: 100vh;
+  text-shadow: 4px 6px 7px #341cd8;
+  color: floralwhite;
+}
+
+.backscreenButtons  {
+  font-size: 30px;
+  width: 200px;
+  border-color: white;
+}
+
+
+#background {
+  background-image: url(../media/facebook-texas-holdem.jpg);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.playpause {
+  width: 15%;
+  bottom: 5%;
+  margin: 0 auto;
+  display: none;
+}
+
+.form-group input {
+  width: 100px;
+  margin: 0 auto;
+}
+
+
+.form-group label {
+  font-weight: 600;
+  font-size: larger;
+}
+
+.blind {
+  width: 40px;
+  text-align: center;
+}
+
+.inputs {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+#settingsButton {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  z-index: 10;
+  border-color: white;
+}
+
+.settings {
+  display: none;
+  background-color: #272e3a80;
+  height: 100vh;
+  z-index: 5;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  color: white;
+}
+
+#mainTitle {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+#startButton {
+  height: 60px;
+  width: 250px;
+  font-size: larger;
+  font-weight: bold;
+  border-color: white;
+}
+
+input {
+  background-color: lightskyblue;
+  text-align: center;
+  color: mediumvioletred;
+}
+
+#continue{
+  display: none;
+  width: 20vw;
+  height: 5vh;
+  border-color: whitesmoke;
+  color: white;
+  background-color: green;
+}
+
+#timerTime {
+  font-size: 80px;
+  text-shadow: 1px 3px 7px #5f131b;
+    color: #ca33f1;
+}
+
+#currentBlinds {
+  font-size: 80px;
+  text-shadow: 1px 3px 7px #5f131b;
+    color: #ca33f1;
+}
