@@ -19,11 +19,20 @@ function setTimes(){
 //$('#currentBlinds').html(`Small: ${smallblindArray()} -- Big: ${bigblindArray()}`)
 
 
+$('#addButton').click(function(){
+
+
+  var newLine = '<div class="form-row"><div class="form-group col-md-3"></div><div class="form-group col-md-2"><label for="smalllBlind1">Small blind</label><br><input type="text" name="smallBlind1" class="form-control smallblind" id="smallBlind1" value=""></div><div class="form-group col-md-2"><label for="bigBlind1">Big blind</label><br><input type="text" name="bigBlind1" class="form-control bigblind" id="bigBlind1" value=""></div><div class="form-group col-md-2"><label for="blindTime1">Time (mins)</label><br><input type="text" name="blindTime1" class="form-control blindtime" id="blindTime1" value=""></div></div>';
+  $('#lastRow').after(newLine);
+});
+
+
 $('#setButton').click(function(){
 
 
     secondsLeft = 0;
       console.log(blindtimeArray());
+      $('#startButton').fadeIn('slow');
       setTimes();
       $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`);
       $('.settings').fadeOut('slow');
@@ -113,16 +122,22 @@ $('#startButton').click(function(){
         updateTime()}}, 1000);
 
     setInterval(function(){
-      if (totalTime < 1000 && bellPlays < 1){
+      if (totalTime < 1000){
       $('#bell')[0].play();
       bellPlays ++;
-      $('#continue').fadeIn('slow');
-      $('.playpause').fadeOut('slow');
+      //$('#continue').fadeIn('slow');
+      //$('.playpause').fadeOut('slow');
       round ++;
-      countdown = false;
-      //console.log(countdown);
       setTimes();
       totalTime = (minutesLeft * 60000) + (secondsLeft * 1000)}}, 1000);
+
+
+    setInterval(function(){
+      if (isNaN(bigblindArray()) == true) {
+        $('#bodyContainer').fadeOut('slow');
+        $('#endGame').fadeIn('slow');
+}
+    }, 500);
 
 
 

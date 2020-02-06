@@ -7,6 +7,13 @@
   color: floralwhite;
 }
 
+.backscreenButtons  {
+  font-size: 30px;
+  width: 200px;
+  border-color: white;
+}
+
+
 #background {
   background-image: url(../media/facebook-texas-holdem.jpg);
   width: 100vw;
@@ -77,6 +84,7 @@
   font-size: larger;
   font-weight: bold;
   border-color: white;
+  display: none;
 }
 
 input {
@@ -106,7 +114,14 @@ input {
     color: #ca33f1;
 }
 
-#setButton{
-  font-size: 30px;
-  width: 10vw;
+#endGame {
+  width: 100vw;
+  height: 60vh;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  top: 30%;
+  display: none;
+  text-shadow: 4px 6px 7px #341cd8;
+  color: floralwhite;
 }
