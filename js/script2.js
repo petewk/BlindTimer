@@ -35,6 +35,9 @@ $('#setButton').click(function(){
       $('#startButton').fadeIn('slow');
       setTimes();
       $('#timerTime').html(`${minutesLeft} minutes and ${secondsLeft} seconds`);
+      $('#blindText').html("The current blinds are:")
+      $('#timerText').html("Time until blinds increase:")
+      console.log("changing screen")
       $('.settings').fadeOut('slow');
       $('#bodyContainer').fadeIn('slow');
       bigblindArray();
