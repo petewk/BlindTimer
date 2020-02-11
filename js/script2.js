@@ -23,7 +23,7 @@ $('#addButton').click(function(){
 
 
   var newLine = '<div class="form-row"><div class="form-group col-md-3"></div><div class="form-group col-md-2"><label for="smalllBlind1">Small blind</label><br><input type="text" name="smallBlind1" class="form-control smallblind" id="smallBlind1" value=""></div><div class="form-group col-md-2"><label for="bigBlind1">Big blind</label><br><input type="text" name="bigBlind1" class="form-control bigblind" id="bigBlind1" value=""></div><div class="form-group col-md-2"><label for="blindTime1">Time (mins)</label><br><input type="text" name="blindTime1" class="form-control blindtime" id="blindTime1" value=""></div></div>';
-  $('#lastRow').after(newLine);
+  $('.form-row').last().after(newLine);
 });
 
 
@@ -63,7 +63,7 @@ var present = 0;
 });
 
 
-countdown = false;
+var countdown = false;
 
 function updateTime(){
     totalTime = totalTime - 1000;
@@ -147,13 +147,33 @@ $('#startButton').click(function(){
 });
 
 
+
+function setTrue(){
+  countdown = true;
+}
+
+function setFalse(){
+  countdown = false;
+}
+
+function pausePlay(){
+  if (countdown == false){
+    setTrue()
+    $('#buttonIcon').removeClass('fas fa-play')
+    $('#buttonIcon').addClass('fas fa-pause')}
+    else {setFalse()
+    $('#buttonIcon').removeClass('fas fa-pause')
+    $('#buttonIcon').addClass('fas fa-play')}
+} ;
+
+
 $('#playButton').click(function(){
-    countdown = true;
+    pausePlay();
+    console.log(countdown);
 });
 
-$('#pauseButton').click(function(){
-    countdown = false;
-});
+
+
 
 $('#continue').click(function(){
     countdown = true;

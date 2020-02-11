@@ -55,7 +55,7 @@
 #settingsButton {
   position: absolute;
   top: 0px;
-  right: 15px;
+  left: 15px;
   z-index: 10;
   border-color: white;
 }
@@ -71,6 +71,7 @@
   width: 100vw;
   text-align: center;
   color: white;
+  overflow: auto;
 }
 
 #mainTitle {
@@ -124,4 +125,14 @@ input {
   display: none;
   text-shadow: 4px 6px 7px #341cd8;
   color: floralwhite;
+}
+
+
+.playPause {
+  height: 45px;
+}
+
+#playButton {
+  height: 45px;
+  width: 100px;
 }
