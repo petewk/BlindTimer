@@ -24,10 +24,10 @@
     <!--INPUT SECTIONS FOR THE BLIND AMOUNTS GO IN HERE-->
 
     <div>
-      <h1 id="timerText">Click the settings button to set your blinds</h1>
+      <h1 id="timerText">Time until the blinds increase:</h1>
       <h2 id="timerTime"></h2>
         <br><br>
-      <h1 id="blindText">Then click 'set' to start the game</h1>
+      <h1 id="blindText">The current blinds are:</h1>
       <h2 id="currentBlinds"></h2>
 
           <br><br><br>
@@ -35,12 +35,9 @@
           <br><br>
 
       <div class="playpause">
-        <button type="button" class="btn btn-success" id="playButton" name="button"><i id="buttonIcon" class="fas fa-pause"></i></button>
+        <button type="button" class="btn btn-success" id="playButton" name="button"><i class="fas fa-play"></i></button>
+        <button type="button" class="btn btn-warning" id="pauseButton" name="button"><i class="fas fa-pause"></i></button>
       </div>
-
-
-
-
 
       <audio id="bell" src="./media/bellring.wav.crdownload">
 
@@ -49,17 +46,8 @@
 
       </audio>
 
-
-
-
     </div>
     </div>
-
-    <div class="" id="endGame">
-      <h1>Time has run out</h1>
-      <h2>If you want to continue, please set new blinds</h2>
-    </div>
-
     </div>
 
     <!--This will show the settings to adjust the blind times-->
@@ -76,7 +64,7 @@
 
 
       <div id="rowsContainer">
-      <div class="form-row">
+      <div class="form-row" id="lastRow">
         <div class="form-group col-md-3">
 
         </div>
@@ -96,7 +84,7 @@
         <br><br>
 
       </div>
-      <div class="form-row">
+      <div class="form-row" id="lastRow">
         <div class="form-group col-md-3">
 
         </div>
@@ -116,7 +104,7 @@
       <br><br>
 
       </div>
-      <div class="form-row lastRow">
+      <div class="form-row" id="lastRow">
         <div class="form-group col-md-3">
 
         </div>

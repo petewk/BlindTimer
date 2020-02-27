@@ -55,7 +55,7 @@
 #settingsButton {
   position: absolute;
   top: 0px;
-  left: 15px;
+  right: 15px;
   z-index: 10;
   border-color: white;
 }
@@ -71,7 +71,6 @@
   width: 100vw;
   text-align: center;
   color: white;
-  overflow: auto;
 }
 
 #mainTitle {
@@ -85,7 +84,6 @@
   font-size: larger;
   font-weight: bold;
   border-color: white;
-  display: none;
 }
 
 input {
@@ -113,26 +111,4 @@ input {
   font-size: 80px;
   text-shadow: 1px 3px 7px #5f131b;
     color: #ca33f1;
-}
-
-#endGame {
-  width: 100vw;
-  height: 60vh;
-  text-align: center;
-  z-index: 10;
-  position: absolute;
-  top: 30%;
-  display: none;
-  text-shadow: 4px 6px 7px #341cd8;
-  color: floralwhite;
-}
-
-
-.playPause {
-  height: 45px;
-}
-
-#playButton {
-  height: 45px;
-  width: 100px;
 }
